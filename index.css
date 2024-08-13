@@ -1,0 +1,122 @@
+
+body{
+    margin: 0;
+    text-transform: uppercase;
+    /* background-color: aquamarine; */
+}
+
+header{
+    display: flex;
+    align-items: center;
+    /* margin-bottom: -200px; */
+   background-color: rgba(211, 211, 211, 0.274);
+    height: 10vh;
+}
+
+.ima img{
+    width: 150px;
+    height: 155px;
+    /* margin-bottom: -100px; */
+}
+header,ul,li,a{
+    /* background-color: aqua; */
+    text-align: center;
+    list-style: none;
+    text-decoration: none;
+    /* padding-left: 10px; */
+    letter-spacing: 2;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    text-transform: capitalize;
+    /* padding: fixed; */
+    /* margin-top: 60px; */
+}
+.nav{
+    margin-left: -10px;
+}
+.ima{
+    margin-left: 200px;
+}
+header,ul,li,a:hover{
+    color: orange;
+}
+ .main{
+    margin-left: 400px;
+} 
+.main{
+ background-color: antiquewhite;
+ box: sizing 50px 50px;
+ padding-left: 10px; 
+ padding: 10px 10px ;
+ font-family: sans-serif;
+ font-weight: 500;
+} 
+.main1 img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;  
+     margin-bottom: -9px;
+
+}
+.main1{
+    margin-left: 600px;
+    justify-content: space-around;
+}
+headr a{
+    margin-left: 5px;
+}
+.Document{
+ /* background-color: rgba(211, 211, 211, 0.274); 
+    background-image: url('Untitled\ design\ \(5\).jpg');
+     background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover; */
+    align-items: center;
+    text-align: center;
+    display: flex;
+    /* position: relative;
+    width: 100%;
+    height: 100vh; */
+}
+     
+.image{
+    margin-top: 60px;
+ margin-left: 150px;
+    width: 540px; 
+    height: 600px;
+border-radius: 2549px 100px 1195px 2050px;  
+  background: orange;
+  margin-top: -40px;
+  background-image: url('image.png.webp');
+}
+.image img{
+     margin-left: 90px;
+     /* margin-left: 300px;  */
+     background-image: url('https://preview.colorlib.com/theme/breed2/img/banner/home-banner.png.webp');
+
+    margin-top: 40px;
+    height: 580px;
+} 
+ .text h1{
+font-size: 200px;
+font-weight: 400;
+text-transform: uppercase;
+letter-spacing: 2;
+color: orange;
+margin-left:-2px;
+/* margin-bottom: 50px; */
+}
+.text{
+    margin-left: 95px;
+    padding-top: 100px;
+}
+.text h5{
+font-size: 26px;
+font-weight: 400;
+text-transform: uppercase;
+letter-spacing: 2;
+color: orange;
+margin-bottom: 50px;
+}
