@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+     body {
+    margin: 0;
+    padding: 0;
+    background-color: #3A243B;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    /* background-color: #2E1B2C; */
+    padding: 30px;
+    border-radius: 10px;
+    /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px;
+}
+
+h1 {
+    color: #CF2B9D;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #FFFFFF;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #472D44;
+    color: #FFFFFF;
+    padding-right: 40px; /* Space for the eye icon */
+}
+
+.password-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.forgot-password {
+    margin-bottom: 20px;
+}
+
+.forgot-password a {
+    color: #ffffffa9;
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-left: -270px;
+}
+
+.Login a {
+    background-color: #CF2B9D;
+    color: #FFFFFF;
+    border: none;
+    padding: 2px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 100%;
+    text-decoration: none;
+    margin-left: 380px;
+}
+.Login{
+    margin-top: -30px;
+}
+@media (max-width: 600px) {
+    .login-container{
+        width: 200px;
+        margin-left: -20px;
+    }
+    .forgot-password{
+        margin-left: 190px;
+    }
+    .Login{
+        margin-left: -200px;
+    }
+}
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Cure Space</h1>
+        <h2>Login To Continue</h2>
+        <form>
+            <div class="input-group">
+                <input type="email" placeholder="E-Mail" required>
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" placeholder="Password" required>
+                <span class="password-toggle" id="toggle-password">
+                    <!-- Eye Icon
+                     <svg id="eye-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 4.5C7 4.5 2.73 7.61 1 12C2.73 16.39 7 19.5 12 19.5C17 19.5 21.27 16.39 23 12C21.27 7.61 17 4.5 12 4.5ZM12 17.5C8.69 17.5 5.9 15.33 5 12C5.9 8.67 8.69 6.5 12 6.5C15.31 6.5 18.1 8.67 19 12C18.1 15.33 15.31 17.5 12 17.5ZM12 8C10.07 8 8.5 9.57 8.5 11.5C8.5 13.43 10.07 15 12 15C13.93 15 15.5 13.43 15.5 11.5C15.5 9.57 13.93 8 12 8ZM12 13C11.17 13 10.5 12.33 10.5 11.5C10.5 10.67 11.17 10 12 10C12.83 10 13.5 10.67 13.5 11.5C13.5 12.33 12.83 13 12 13Z" fill="white"/> 
+                    </svg>  -->
+                </span>
+            </div>
+            <div class="forgot-password">
+                <a href="#">Forgot password></a>
+            </div>
+            <div class="Login">
+                <a href="#">Login</a>
+            </div>
+        </form>
+    </div>
+    <script>
+document.getElementById('toggle-password').addEventListener('click', function () {
+    const passwordField = document.getElementById('password');
+    const eyeIcon = document.getElementById('eye-icon');
+
+    if (passwordField.type === 'password') {
+        passwordField.type = 'text';
+        eyeIcon.innerHTML = `
+            <path d="M12 4.5C7 4.5 2.73 7.61 1 12C2.73 16.39 7 19.5 12 19.5C17 19.5 21.27 16.39 23 12C21.27 7.61 17 4.5 12 4.5ZM12 17.5C8.69 17.5 5.9 15.33 5 12C5.9 8.67 8.69 6.5 12 6.5C15.31 6.5 18.1 8.67 19 12C18.1 15.33 15.31 17.5 12 17.5ZM12 8C10.07 8 8.5 9.57 8.5 11.5C8.5 13.43 10.07 15 12 15C13.93 15 15.5 13.43 15.5 11.5C15.5 9.57 13.93 8 12 8ZM12 13C11.17 13 10.5 12.33 10.5 11.5C10.5 10.67 11.17 10 12 10C12.83 10 13.5 10.67 13.5 11.5C13.5 12.33 12.83 13 12 13Z" fill="white"/>
+        `;
+    } else {
+        passwordField.type = 'password';
+        eyeIcon.innerHTML = `
+            <path d="M12 4.5C7 4.5 2.73 7.61 1 12C2.73 16.39 7 19.5 12 19.5C17 19.5 21.27 16.39 23 12C21.27 7.61 17 4.5 12 4.5ZM12 17.5C8.69 17.5 5.9 15.33 5 12C5.9 8.67 8.69 6.5 12 6.5C15.31 6.5 18.1 8.67 19 12C18.1 15.33 15.31 17.5 12 17.5ZM12 8C10.07 8 8.5 9.57 8.5 11.5C8.5 13.43 10.07 15 12 15C13.93 15 15.5 13.43 15.5 11.5C15.5 9.57 13.93 8 12 8ZM12 13C11.17 13 10.5 12.33 10.5 11.5C10.5 10.67 11.17 10 12 10C12.83 10 13.5 10.67 13.5 11.5C13.5 12.33 12.83 13 12 13Z" fill="white"/>
+        `;
+    }
+});
+    </script>
+</body>
+</html>

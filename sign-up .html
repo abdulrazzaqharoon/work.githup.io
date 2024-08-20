@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <style>
+            body {
+             margin: 0;
+             font-family: Arial, sans-serif;
+             background-color: #3A2B5D; /* Background color matching your image */
+             color: #FFFFFF;
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+             justify-content: center;
+             height: 100vh;
+             background-image: url('Untitled design (5).jpg'); /* Replace with your actual background image */
+             background-image: url('https://static.vecteezy.com/system/resources/thumbnails/011/635/825/small_2x/abstract-square-interface-modern-background-concept-fingerprint-digital-scanning-visual-security-system-authentication-login-vector.jpg'); /* Replace with your actual background image */
+             background-size: cover;
+             background-position: center;
+         }
+         
+         .header {
+             background-color: #7E3AA2;
+             width: 100%;
+             text-align: center;
+             padding: 20px 0;
+             margin-top: -170px;
+         }
+         
+         .gradient-text {
+             background: linear-gradient(90deg, #D4418E, #2A98F6);
+             -webkit-background-clip: text;
+             -webkit-text-fill-color: transparent;
+             font-size: 2.5em;
+             margin: 0;
+         }
+         
+         .container {
+             /* background-color: rgba(0, 0, 0, 0.7); Semi-transparent background */
+             padding: 20px;
+             /* border-radius: 10px; */
+             /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
+             max-width: 400px;
+             width: 90%;
+             text-align: center;
+         }
+         
+         .sign-up-form {
+             display: flex;
+             flex-direction: column;
+         }
+         
+         .sign-up-form h2 {
+             margin-bottom: 20px;
+             font-size: 1.5em;
+         }
+         
+         .sign-up-form input {
+             padding: 15px;
+             margin-bottom: 15px;
+             border: none;
+             border-radius: 25px;
+             background-color: #7E3AA2;
+             color: white;
+             font-size: 1em;
+         }
+         
+         .password-container {
+             position: relative;
+         }
+         
+         .password-container input {
+             width: 90%;
+         }
+         
+         .toggle-password {
+             position: absolute;
+             top: 50%;
+             right: 15px;
+             transform: translateY(-50%);
+             cursor: pointer;
+         }
+         
+         .sign-up-form button {
+             padding: 10px 2px;
+             padding-left: 5px;
+             border: none;
+             border-radius: 25px;
+             background-color: #E71F67;
+             color: white;
+             font-size: 1em;
+             cursor: pointer;
+             transition: background-color 0.3s ease;
+             margin-left: 250px;
+         }
+         
+         .sign-up-form button:hover {
+             background-color: #C71B5B;
+         }
+         
+         /* Responsive Design */
+@media (max-width: 320px) {
+    /*  */
+         
+    .sign-up-form button {
+        margin-left: 150px;
+    }
+    /*  */
+    .header {
+        margin-top: -260px;
+    }
+    .gradient-text {
+        font-size: 2em;
+    }
+
+    .sign-up-form h2 {
+        font-size: 1.2em;
+    }
+
+    .sign-up-form input, .sign-up-form button {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+}
+         /* @media (max-width: 300px) {
+            .header {
+             margin-top: -52px;
+         }
+             .gradient-text {
+                 font-size: 2em;
+             }
+             .sign-up-form h2 {
+                 font-size: 1.2em;
+             }
+         
+             .sign-up-form input, .sign-up-form button {
+                 font-size: 0.9em;
+                 padding: 10px;
+             }
+             .gradient-text {
+                 font-size: 2em;
+             }
+             .sign-up-form h2 {
+                 font-size: 1.2em;
+             }
+         
+             .sign-up-form input, .sign-up-form button {
+                 font-size: 0.9em;
+                 padding: 10px;
+             }
+         }   */
+             </style>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <header class="header">
+            <h1 class="gradient-text">Cure Space</h1>
+        </header>
+    
+        <div class="container">
+            <form class="sign-up-form">
+                <h2>Sign Up To Continue</h2>
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="E-Mail" required>
+                <div class="password-container">
+                    <input type="password" placeholder="Password" required>
+                    <span class="toggle-password">👁️</span>
+                </div>
+                <input type="tel" placeholder="Phone Number" required>
+                <button type="submit">Create an account</button>
+            </form>
+        </div>
+        <script>
+           document.querySelector('.toggle-password').addEventListener('click', function() {
+    let passwordField = document.querySelector('.password-container input');
+    let type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+    passwordField.setAttribute('type', type);
+}); 
+        </script>
+    </body>
+    </html>
